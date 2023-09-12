@@ -13,7 +13,7 @@ export default function Navbar() {
     <BrowserRouter>
       <nav className={style.nav}>
         <div className={style.navbar}>
-          <div className="logo">
+          <div className={style.logo}>
             <img src={planetLogo} alt="planet-logo" className={style.logoImg} />
             <h1 className={style.title}>Space Travelers Hub</h1>
           </div>

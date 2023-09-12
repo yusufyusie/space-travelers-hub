@@ -22,3 +22,16 @@
 .navlink:active {
   text-decoration: underline;
 }
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logoImg {
+  width: 5%;
+}
+
+.title {
+  /* width: 100%; */
+}
