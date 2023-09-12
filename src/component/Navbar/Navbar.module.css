@@ -10,6 +10,7 @@
   margin-left: 2em;
   text-decoration: none;
   color: #08f;
+  letter-spacing:0.03rem;
 }
 
 .navlink:last-of-type {
@@ -20,10 +21,13 @@
 
 .navlink:hover {
   text-decoration: underline;
+  color: #d63384;
+  box-sizing: border-box;
 }
 
 .navlink:active {
   text-decoration: underline;
+  color: #d63384;
 }
 
 .logo {
