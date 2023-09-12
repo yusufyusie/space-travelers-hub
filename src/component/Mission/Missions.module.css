@@ -8,16 +8,20 @@
   }
   
   .table {
-    width: 100%;
-    margin-top: 1rem;
+    width: 90%;
+    margin: 1rem;
+    padding: 1rem;
     vertical-align: top;
     caption-side: bottom;
     border-collapse: collapse;
-    color: #e3e6f0;
+    color: #000;
+    border: 1px solid #cecaca;
   }
   
   .row {
     background-color: #fcfcfc;
+    color:#5a5c69;
+    border: 1px solid #cecaca;
   }
   
   .column {
@@ -32,17 +36,24 @@
   
   .column:first-child {
     width: 12%;
+    border: 1px solid #cecaca;
   }
   
   .column:nth-child(2) {
     width: 60%;
+    border: 1px solid #cecaca;
   }
   
   .column:nth-child(3) {
     width: 12%;
+    border: 1px solid #cecaca;
   }
   
   .column:nth-child(4) {
     width: 16%;
+    border: 1px solid #cecaca;
   }
   
+  .cell {
+    border: 1px solid #cecaca;
+  }
