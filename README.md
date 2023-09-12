@@ -2,7 +2,7 @@
 
 <div align="center">
 
- ![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Space Travelers' Hub
 
@@ -44,13 +44,13 @@
 
 - ReactJs
 - Javascript
+
 ### Tech Stack <a name="tech-stack"></a>
 
-  <a href="https://www.w3.org/html/" target="_blank"><img align="center" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/html-icon.svg" alt="html5" width="55" height="55"/></a>
+<a href="https://www.w3.org/html/" target="_blank"><img align="center" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/html-icon.svg" alt="html5" width="55" height="55"/></a>
 <a href="https://www.w3schools.com/css/" target="_blank"><img align="center" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/css-icon.svg" alt="css3" width="55" height="55"/></a>
 <a href="https://reactjs.org/" target="_blank"><img align="center" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/react-js-icon.svg" alt="react js" width="55" height="55"/></a>
 <a href="https://redux.js.org/" target="_blank"><img align="center" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/redux-icon.svg" alt="react js" width="55" height="55"/></a>
-  
 
 <!-- Features -->
 
@@ -68,7 +68,7 @@
 
 - [Soon]()
 
-<!--  
+<!--
 - [Video presentation](https://www.loom.com/share/)
 -->
 
@@ -155,6 +155,11 @@ npm run build
 - Twitter: [@yusufyusiee](https://twitter.com/yusufyusiee)
 - LinkedIn: [Yesuf Fenta](https://www.linkedin.com/in/yusufyusie/)
 
+👤 **May Pyone**
+
+- GitHub: [@githubhandle](https://github.com/MayPyone)
+- Twitter: [@twitterhandle](https://twitter.com/maypyone015)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/may-pyone-9439961a3/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
