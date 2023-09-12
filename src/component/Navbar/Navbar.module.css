@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navlink {
+  margin-left: 2em;
+  text-decoration: none;
+  color: #0088ff;
+}
+
+.navlink:last-of-type {
+  border-left: 2px solid black;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+.navlink:hover {
+  text-decoration: underline;
+}
+
+.navlink:active {
+  text-decoration: underline;
+}

@@ -5,18 +5,23 @@ import Rockets from '../Rocket/Rockets';
 import Missions from '../Mission/Missions';
 import Dragons from '../Dragon/Dragons';
 import Profile from '../Profile/Profile';
+import style from './Navbar.module.css';
+import planetLogo from './planet.png';
 
 export default function Navbar() {
   return (
     <BrowserRouter>
-      <nav>
-        <div className="navbar">
-          <div className="space">
-            <h1>Space Travelers Hub</h1>
-            <NavLink to="/">Rockets</NavLink>
-            <NavLink to="mission">Missions</NavLink>
-            <NavLink to="dragon">Dragons</NavLink>
-            <NavLink to="profile">My Profile</NavLink>
+      <nav className={style.nav}>
+        <div className={style.navbar}>
+          <div className="logo">
+            <img src={planetLogo} alt="planet-logo" className={style.logoImg} />
+            <h1 className={style.title}>Space Travelers Hub</h1>
+          </div>
+          <div className={style.space}>
+            <NavLink className={style.navlink} to="/">Rockets</NavLink>
+            <NavLink className={style.navlink} to="mission">Missions</NavLink>
+            <NavLink className={style.navlink} to="dragon">Dragons</NavLink>
+            <NavLink className={style.navlink} to="profile">My Profile</NavLink>
           </div>
         </div>
         <main>
