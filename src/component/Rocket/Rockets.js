@@ -1,7 +1,7 @@
 export default function Rockets() {
-    return (
-      <>
-        <h1>Rockets page</h1>
-      </>
-    );
-  }
+  return (
+    <>
+      <h1>Rockets page</h1>
+    </>
+  );
+}

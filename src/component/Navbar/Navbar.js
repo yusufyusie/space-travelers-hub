@@ -1,14 +1,14 @@
 import {
-    NavLink,Routes, Route,BrowserRouter,
-  } from 'react-router-dom';
+  NavLink, Routes, Route, BrowserRouter,
+} from 'react-router-dom';
 import Rockets from '../Rocket/Rockets';
 import Missions from '../Mission/Missions';
 import Dragons from '../Dragon/Dragons';
 import Profile from '../Profile/Profile';
 
-  export default function Navbar() {
-    return (
-     <BrowserRouter>
+export default function Navbar() {
+  return (
+    <BrowserRouter>
       <nav>
         <div className="navbar">
           <div className="space">
@@ -20,14 +20,14 @@ import Profile from '../Profile/Profile';
           </div>
         </div>
         <main>
-        <Routes>
-          <Route index element={<Rockets />} />
-          <Route path="mission" element={<Missions />} />
-          <Route path="dragon" element={<Dragons />} />
-          <Route path="profile" element={<Profile />} />
-        </Routes>
-      </main>
+          <Routes>
+            <Route index element={<Rockets />} />
+            <Route path="mission" element={<Missions />} />
+            <Route path="dragon" element={<Dragons />} />
+            <Route path="profile" element={<Profile />} />
+          </Routes>
+        </main>
       </nav>
-      </BrowserRouter>
-    );
-  }
+    </BrowserRouter>
+  );
+}
