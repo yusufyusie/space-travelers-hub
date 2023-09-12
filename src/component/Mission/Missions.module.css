@@ -1,0 +1,48 @@
+.mission-container {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    padding:1rem;
+    color:#858796;
+    overflow-x: auto;   
+  }
+  
+  .table {
+    width: 100%;
+    margin-top: 1rem;
+    vertical-align: top;
+    caption-side: bottom;
+    border-collapse: collapse;
+    color: #e3e6f0;
+  }
+  
+  .row {
+    background-color: #fcfcfc;
+  }
+  
+  .column {
+    border: 1px solid #cecaca;
+    text-align: left;
+    padding: 8px;
+    vertical-align: bottom;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+  }
+  
+  .column:first-child {
+    width: 12%;
+  }
+  
+  .column:nth-child(2) {
+    width: 60%;
+  }
+  
+  .column:nth-child(3) {
+    width: 12%;
+  }
+  
+  .column:nth-child(4) {
+    width: 16%;
+  }
+  

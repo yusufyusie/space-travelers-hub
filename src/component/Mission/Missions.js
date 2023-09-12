@@ -1,16 +1,18 @@
+import React from 'react';
+import './Missions.module.css';
+
 const Missions = () => (
-  <section>
-    <table>
+  <section className="mission-container">
+    <table className="table">
       <thead>
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th>Join Mission</th>
+        <tr className="row">
+          <th className="column">Mission</th>
+          <th className="column">Description</th>
+          <th className="column">Status</th>
+          <th className="column">Join Mission</th>
         </tr>
       </thead>
     </table>
   </section>
 );
-
 export default Missions;
