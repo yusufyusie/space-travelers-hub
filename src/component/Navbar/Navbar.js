@@ -6,19 +6,25 @@ import Missions from '../Mission/Missions';
 import Dragons from '../Dragon/Dragons';
 import Profile from '../Profile/Profile';
 import logo from '../../assets/images/logo.png';
+import '../../assets/styles/NavLink.css';
 
 export default function Navbar() {
+  const clickedStyle = ({ isActive }) => ({
+    color: isActive ? 'black' : 'red',
+  });
   return (
     <BrowserRouter>
       <nav>
         <div className="navbar">
-          <img className="logo" src={logo} alt="logo" />
+          <NavLink to="/" className="nav-logo">
+            <img className="logo" src={logo} alt="logo" />
+          </NavLink>
           <div className="space">
             <h1>Space Travelers Hub</h1>
-            <NavLink to="/">Rockets</NavLink>
-            <NavLink to="mission">Missions</NavLink>
-            <NavLink to="dragon">Dragons</NavLink>
-            <NavLink to="profile">My Profile</NavLink>
+            <NavLink to="/" onClick={clickedStyle} className="navlinks">Rockets</NavLink>
+            <NavLink to="mission" onClick={clickedStyle} className="navlinks">Missions</NavLink>
+            <NavLink to="dragon" onClick={clickedStyle} className="navlinks">Dragons</NavLink>
+            <NavLink to="profile" onClick={clickedStyle} className="navlinks">My Profile</NavLink>
           </div>
         </div>
         <main>

@@ -1,0 +1,19 @@
+.nav-logo {
+    display: flex;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-items {
+    display: flex;
+    gap: 30px;
+  }
+  
