@@ -1,7 +1,16 @@
-export default function Missions() {
-  return (
-    <>
-      <h1>Missions page</h1>
-    </>
-  );
-}
+const Missions = () => (
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Join Mission</th>
+        </tr>
+      </thead>
+    </table>
+  </section>
+);
+
+export default Missions;
