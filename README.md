@@ -161,6 +161,11 @@ npm run build
 - Twitter: [@twitterhandle](https://twitter.com/maypyone015)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/may-pyone-9439961a3/)
 
+👤 **Binyam Yohannes**
+
+- GitHub: [@githubhandle](https://github.com/binyamolango)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/binyamyohannes)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
