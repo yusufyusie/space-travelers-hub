@@ -1,5 +1,6 @@
 .nav-logo {
     display: flex;
+    gap: 8px;
   }
   
   .logo {
@@ -12,8 +13,14 @@
     justify-content: space-between;
   }
   
-  .nav-items {
+  .space {
     display: flex;
-    gap: 30px;
+    gap: 28px;
+    margin-right: 10px;
+    padding: 2px;
   }
-  
+
+  .active {
+    text-decoration: underline;
+    color: #0ea5e9;
+  }

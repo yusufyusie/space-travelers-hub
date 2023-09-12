@@ -14,13 +14,13 @@ export default function Navbar() {
   });
   return (
     <BrowserRouter>
-      <nav>
-        <div className="navbar">
+      <nav className="Navbar">
+        <div className="nav-container">
           <NavLink to="/" className="nav-logo">
             <img className="logo" src={logo} alt="logo" />
+            <h1>Space Traverlers&apos; Hub</h1>
           </NavLink>
           <div className="space">
-            <h1>Space Travelers Hub</h1>
             <NavLink to="/" onClick={clickedStyle} className="navlinks">Rockets</NavLink>
             <NavLink to="mission" onClick={clickedStyle} className="navlinks">Missions</NavLink>
             <NavLink to="dragon" onClick={clickedStyle} className="navlinks">Dragons</NavLink>
