@@ -22,10 +22,6 @@
   text-decoration: underline;
 }
 
-.navlink:active {
-  text-decoration: underline;
-}
-
 .logo {
   display: flex;
   justify-content: flex-start;
@@ -40,4 +36,8 @@
   font-size: 2rem;
   font-weight: 400;
   margin-left: 0.25em;
+}
+
+.activelink {
+  text-decoration: underline;
 }

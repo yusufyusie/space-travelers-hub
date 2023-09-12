@@ -1,6 +1,9 @@
+import React from 'react';
 import {
-  NavLink, Routes, Route, BrowserRouter,
+  Link, Routes, Route, BrowserRouter, useMatch,
 } from 'react-router-dom';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import PropTypes from 'prop-types';
 import Rockets from '../Rocket/Rockets';
 import Missions from '../Mission/Missions';
 import Dragons from '../Dragon/Dragons';
@@ -15,24 +18,39 @@ export default function Navbar() {
         <div className={style.navbar}>
           <div className={style.logo}>
             <img src={planetLogo} alt="planet-logo" className={style.logoImg} />
-            <h1 className={style.title}>Space Travelers Hub</h1>
+            <h1 className={style.title}>Space Travelers&apos; Hub</h1>
           </div>
           <div className={style.space}>
-            <NavLink className={style.navlink} to="/">Rockets</NavLink>
-            <NavLink className={style.navlink} to="mission">Missions</NavLink>
-            <NavLink className={style.navlink} to="dragon">Dragons</NavLink>
-            <NavLink className={style.navlink} to="profile">My Profile</NavLink>
+            <NavLink to="/" label="Rockets" />
+            <NavLink to="/mission" label="Missions" />
+            <NavLink to="/dragon" label="Dragons" />
+            <NavLink to="/profile" label="My Profile" />
           </div>
         </div>
         <main>
           <Routes>
-            <Route index element={<Rockets />} />
-            <Route path="mission" element={<Missions />} />
-            <Route path="dragon" element={<Dragons />} />
-            <Route path="profile" element={<Profile />} />
+            <Route path="/" element={<Rockets />} />
+            <Route path="/mission" element={<Missions />} />
+            <Route path="/dragon" element={<Dragons />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </main>
       </nav>
     </BrowserRouter>
   );
 }
+
+function NavLink({ to, label }) {
+  const isActive = useMatch(to);
+
+  return (
+    <Link to={to} className={`${style.navlink} ${isActive ? style.activelink : ''}`}>
+      {label}
+    </Link>
+  );
+}
+
+NavLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+};
