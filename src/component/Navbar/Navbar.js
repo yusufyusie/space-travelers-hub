@@ -5,12 +5,14 @@ import Rockets from '../Rocket/Rockets';
 import Missions from '../Mission/Missions';
 import Dragons from '../Dragon/Dragons';
 import Profile from '../Profile/Profile';
+import logo from '../../assets/images/logo.png';
 
 export default function Navbar() {
   return (
     <BrowserRouter>
       <nav>
         <div className="navbar">
+          <img className="logo" src={logo} alt="logo" />
           <div className="space">
             <h1>Space Travelers Hub</h1>
             <NavLink to="/">Rockets</NavLink>
