@@ -1,6 +1,9 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  border-bottom: 1px solid gray;
 }
 
 .navlink {
@@ -10,7 +13,7 @@
 }
 
 .navlink:last-of-type {
-  border-left: 2px solid black;
+  border-left: 3px solid gray;
   margin-left: 1em;
   padding-left: 1em;
 }
@@ -26,12 +29,15 @@
 .logo {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .logoImg {
-  width: 5%;
+  width: 6%;
 }
 
 .title {
-  /* width: 100%; */
+  font-size: 2rem;
+  font-weight: 400;
+  margin-left: 0.25em;
 }
