@@ -12,7 +12,7 @@ export default function Navbar() {
       <nav>
         <div className="navbar">
           <div className="space">
-            <h1>Space Travelers' Hub</h1>
+            <h1>Space Travelers Hub</h1>
             <NavLink to="/">Rockets</NavLink>
             <NavLink to="mission">Missions</NavLink>
             <NavLink to="dragon">Dragons</NavLink>
