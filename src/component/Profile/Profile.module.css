@@ -9,3 +9,42 @@
 .rocketSection {
   width: 33%;
 }
+
+.missionsList {
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 40px;
+}
+
+.missionsList * {
+  font-family: 'Roboto', sans-serif;
+}
+
+.listTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4px;
+}
+
+.missionsList p {
+  font-style: italic;
+}
+
+.missionsList ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.missionsList ul li {
+  padding: 15px 15px 25px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.missionsList ul li:last-child {
+  border-bottom: none;
+}

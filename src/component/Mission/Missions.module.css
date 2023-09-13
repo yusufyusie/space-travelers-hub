@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 .mission-container {
   display: flex;
   justify-content: center;
@@ -9,14 +11,28 @@
 
 .table {
   width: 90%;
-  margin: 1rem;
   padding: 1rem;
   vertical-align: top;
   caption-side: bottom;
   border-collapse: collapse;
-  color: #000;
-  border: 1px solid #cecaca;
+  border: 2px solid #cecaca;
+  color: #363636;
+  margin: 2rem 5%;
+  table-layout: fixed;
 }
+
+.table * {
+  font-family: 'Roboto', sans-serif;
+}
+
+.table td,
+.table th {
+  border: 2px solid #dadada;
+  padding: 1rem 0.5rem;
+}
+
+.table tr:nth-child(even) { background-color: #f2f2f2; }
+.table tr:hover { background-color: #ddd; }
 
 .row {
   background-color: #fcfcfc;
@@ -56,4 +72,49 @@
 
 .cell {
   border: 1px solid #cecaca;
+}
+
+.cell:nth-child(3) {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cell:nth-child(4) {
+  text-align: center;
+}
+
+.notmember {
+  padding: 5px;
+  background-color: #777474;
+  color: white;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.member {
+  padding: 5px;
+  background-color: #0c9aad;
+  color: white;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.joinMissions {
+  padding: 10px 15px;
+  font-size: 15px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
