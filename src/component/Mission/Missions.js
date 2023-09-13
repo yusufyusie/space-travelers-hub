@@ -56,7 +56,7 @@ const Missions = () => {
   }
   if (error) {
     return (
-      <p>Something is incorrct</p>
+      <p>Something is incorrect!</p>
     );
   }
   return (
