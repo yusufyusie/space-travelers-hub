@@ -38,12 +38,12 @@ const RocketsList = (props) => {
               </Badge>
               <span className={style.rockDesc}>{description}</span>
             </p>
-            <Button>Cancel Reservation</Button>
+            <Button variant="light">Cancel Reservation</Button>
           </div>
         ) : (
           <div>
             <p>{description}</p>
-            <Button type="button" onClick={reserveRocketHandler}>Reserve Rocket</Button>
+            <Button variant="primary" onClick={reserveRocketHandler}>Reserve Rocket</Button>
           </div>
         )}
       </div>
