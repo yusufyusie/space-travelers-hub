@@ -11,7 +11,7 @@ import { reserveRocket } from '../../redux/rocket/rocketSlice';
 
 const RocketsList = (props) => {
   const {
-    name, description, image, id,
+    name, description, image, id, reserved,
   } = props;
 
   const dispatch = useDispatch();
@@ -29,10 +29,20 @@ const RocketsList = (props) => {
         <h4 className={style.rocketName}>
           {name}
         </h4>
-        <p className={style.rocketType}>
-          {description}
-        </p>
-        <Button type="button" onClick={reserveRocketHandler}>Reserve Rocket</Button>
+        { reserved ? (
+          <div>
+            <p>
+              <span>reserved</span>
+              {description}
+            </p>
+            <Button>Cancel Reservation</Button>
+          </div>
+        ) : (
+          <div>
+            <p>{description}</p>
+            <Button type="button" onClick={reserveRocketHandler}>Reserve Rocket</Button>
+          </div>
+        )}
       </div>
     </Col>
   );
@@ -43,6 +53,7 @@ RocketsList.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default RocketsList;
