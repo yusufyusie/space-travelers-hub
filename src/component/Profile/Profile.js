@@ -9,9 +9,11 @@ import style from './Profile.module.css';
 
 export default function Profile() {
   const rockets = useSelector((state) => state.rockets.rockets);
+  const { totalDragons } = useSelector((state) => state.dragon);
   const { allMissions } = useSelector((store) => store.allMissions);
 
   const joinedMissions = allMissions.filter((mission) => mission.joined === true);
+  
   return (
     <Container fluid className={style.container}>
       <div className={style.rocketSection}>
@@ -29,7 +31,22 @@ export default function Profile() {
             ))}
         </ListGroup>
       </div>
-      <div className={style.missionsList}>
+      <div className={style.rocketSection}>
+        <h4>My Dragons</h4>
+        <ListGroup className={style.rocketList}>
+          {totalDragons
+            .filter((dragon) => dragon.reserved)
+            .map((dragon) => (
+              <ListGroup.Item key={dragon.id}>
+                <ReservedRocketList
+                  key={dragon.id}
+                  name={dragon.name}
+                />
+              </ListGroup.Item>
+            ))}
+        </ListGroup>
+      </div>
+        <div className={style.missionsList}>
         <h2 className={style.listTitle}>My Missions</h2>
         {joinedMissions.length === 0
           ? <p>No joined missions</p> : (
@@ -39,7 +56,6 @@ export default function Profile() {
               ))}
             </ul>
           )}
-      </div>
     </Container>
   );
 }
