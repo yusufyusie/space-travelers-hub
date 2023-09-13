@@ -4,7 +4,7 @@ import missionsReducer from './mission/MissionsSlice';
 
 const store = configureStore({
   reducer: {
-    missions: missionsReducer,
+    allMissions: missionsReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

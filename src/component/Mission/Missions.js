@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import style from './Missions.module.css';
 import { joinMission, getAllMissions } from '../../redux/mission/MissionsSlice';
@@ -12,7 +12,6 @@ const Missions = () => {
       dispatch(getAllMissions());
     }
   }, [dispatch, allMissions.length]);
-
   if (allMissions.length !== 0) {
     return (
       <section className="mission-container">
@@ -49,6 +48,7 @@ const Missions = () => {
       </section>
     );
   }
+
   if (loading) {
     return (
       <p> Missions are loading!</p>

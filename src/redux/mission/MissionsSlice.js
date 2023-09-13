@@ -25,23 +25,23 @@ const missionsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getAllMissions.pending, (state) => {
-        state.isLoading = true;
+        state.loading = true;
       })
       .addCase(getAllMissions.fulfilled, (state, action) => {
-        state.isLoading = false;
-        const missionsArray = [];
-        action.payload.forEach((item) => {
+        state.loading = false;
+        const missionArray = [];
+        action.payload.forEach((m) => {
           const mission = {
-            mission_id: item.mission_id,
-            mission_name: item.mission_name,
-            description: item.description,
+            mission_id: m.mission_id,
+            mission_name: m.mission_name,
+            description: m.description,
           };
-          missionsArray.push(mission);
+          missionArray.push(mission);
         });
-        state.missions = missionsArray;
+        state.missions = missionArray;
       })
       .addCase(getAllMissions.rejected, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.error = action.payload.message;
       });
   },
