@@ -6,20 +6,15 @@
   gap: 1em;
 }
 
-.rocketSection {
-  width: 33%;
+.rocketSection,
+.missionsList {
+  width: 100%;
 }
 
 .missionsList {
-  width: 36%;
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding: 0px 40px;
-}
-
-.missionsList * {
-  font-family: 'Roboto', sans-serif;
 }
 
 .listTitle {
