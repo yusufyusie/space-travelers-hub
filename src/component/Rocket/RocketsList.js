@@ -34,7 +34,7 @@ const RocketsList = (props) => {
         <h4 className={style.rocketName}>
           {name}
         </h4>
-        { reserved ? (
+        { reserved && (
           <div>
             <p>
               <Badge bg="info">
@@ -44,7 +44,8 @@ const RocketsList = (props) => {
             </p>
             <Button variant="light" onClick={cancelReservationHandler}>Cancel Reservation</Button>
           </div>
-        ) : (
+        )}
+        { !reserved && (
           <div>
             <p>{description}</p>
             <Button variant="primary" onClick={reserveRocketHandler}>Reserve Rocket</Button>
