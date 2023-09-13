@@ -17,3 +17,8 @@
 .rocketDesc {
   width: 100%;
 }
+
+.reservedSign {
+  padding: 5px auto;
+  background-color: black;
+}

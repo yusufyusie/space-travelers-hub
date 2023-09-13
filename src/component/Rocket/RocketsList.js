@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
 import style from './RocketsList.module.css';
 
 import { reserveRocket } from '../../redux/rocket/rocketSlice';
@@ -32,8 +33,10 @@ const RocketsList = (props) => {
         { reserved ? (
           <div>
             <p>
-              <span>reserved</span>
-              {description}
+              <Badge bg="info">
+                Reserved
+              </Badge>
+              <span className={style.rockDesc}>{description}</span>
             </p>
             <Button>Cancel Reservation</Button>
           </div>
