@@ -18,7 +18,6 @@
   width: 100%;
 }
 
-.reservedSign {
-  padding: 5px auto;
-  background-color: black;
+.rockDesc {
+  margin-left: 0.75em;
 }
