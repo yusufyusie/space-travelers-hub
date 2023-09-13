@@ -30,15 +30,15 @@ const Missions = () => {
                 <td className={style.cell}>{m.mission_name}</td>
                 <td className={style.cell}>{m.description}</td>
                 <td className={style.cell}>
-                  {m.reserved ? (
-                    <span className={style.member}>active member</span>
-                  ) : (<span className={style.not_member}>not a member</span>)}
+                  {m.joined ? (
+                    <span className={style.member}>Active Member</span>
+                  ) : (<span className={style.not_member}>NOT A MEMBER</span>)}
                 </td>
                 <td className={style.cell}>
                   <button type="button" className={style.joinMissions} onClick={() => dispatch(joinMission(m.mission_id))}>
-                    {m.reserved ? (
-                      'leave mission'
-                    ) : ('join mission')}
+                    {m.joined ? (
+                      'Leave Mission'
+                    ) : ('Join Mission')}
                   </button>
                 </td>
               </tr>

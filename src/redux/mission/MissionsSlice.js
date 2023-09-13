@@ -27,8 +27,8 @@ const missionsSlice = createSlice({
         if (mission.mission_id !== action.payload) {
           return mission;
         }
-        return mission.reserved === true ? { ...mission, reserved: false }
-          : { ...mission, reserved: true };
+        return mission.joined === true ? { ...mission, joined: false }
+          : { ...mission, joined: true };
       });
       state.allMissions = newMissionsState;
     },
