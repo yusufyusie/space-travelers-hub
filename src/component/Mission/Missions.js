@@ -26,14 +26,24 @@ const Missions = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className={style.cell}>Thaicom</td>
-              <td className={style.cell}>Thaicom is the name of series communications satellite</td>
-              <td className={style.cell}>Not A Member</td>
-              <td className={style.cell}>
-                <button type="button" className={style.joinMissions} onClick={() => dispatch(joinMission())}>{}</button>
-              </td>
-            </tr>
+            {allMissions.map((m) => (
+              <tr key={m.mission_id}>
+                <td className={style.cell}>{m.mission_name}</td>
+                <td className={style.cell}>{m.description}</td>
+                <td className={style.cell}>
+                  {m.reserved ? (
+                    <span className={style.member}>active member</span>
+                  ) : (<span className={style.not_member}>not a member</span>)}
+                </td>
+                <td className={style.cell}>
+                  <button type="button" className={style.joinMissions} onClick={() => dispatch(joinMission(m.mission_id))}>
+                    {m.reserved ? (
+                      'leave mission'
+                    ) : ('join mission')}
+                  </button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </section>
