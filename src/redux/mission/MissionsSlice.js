@@ -10,6 +10,7 @@ const missionsSlice = createSlice({
   name: 'allMissions',
   initialState,
   reducers: {},
+  extraReducers() {},
 });
 
 export default missionsSlice.reducer;
