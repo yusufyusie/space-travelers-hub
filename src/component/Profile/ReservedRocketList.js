@@ -3,18 +3,17 @@ import PropTypes from 'prop-types';
 
 const ReservedRocketList = (props) => {
   const {
-    reserved, name,
+    name,
   } = props;
 
   return (
     <>
-      { reserved && name }
+      { name }
     </>
   );
 };
 
 ReservedRocketList.propTypes = {
-  reserved: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
 };
 

@@ -15,17 +15,16 @@ export default function Profile() {
       <div className={style.rocketSection}>
         <h4>My Rockets</h4>
         <ListGroup className={style.rocketList}>
-          {
-            rockets.map((rocket) => (
+          {rockets
+            .filter((rocket) => rocket.reserved)
+            .map((rocket) => (
               <ListGroup.Item key={rocket.id}>
                 <ReservedRocketList
                   key={rocket.id}
                   name={rocket.name}
-                  reserved={rocket.reserved}
                 />
               </ListGroup.Item>
-            ))
-          }
+            ))}
         </ListGroup>
       </div>
     </Container>
