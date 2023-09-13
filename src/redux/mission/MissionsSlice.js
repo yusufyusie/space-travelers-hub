@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 import { GET_MISSIONS, API_MISSION } from './missionAPI';
 
@@ -20,7 +21,18 @@ export const getAllMissions = createAsyncThunk(GET_MISSIONS, async (_, thunkAPI)
 const missionsSlice = createSlice({
   name: 'allMissions',
   initialState,
-  reducers: {},
+  reducers: {
+    joinMission: (state, action) => {
+      const newMissionsState = state.allMissions.map((mission) => {
+        if (mission.mission_id !== action.payload) {
+          return mission;
+        }
+        return mission.reserved === true ? { ...mission, reserved: false }
+          : { ...mission, reserved: true };
+      });
+      state.missions = newMissionsState;
+    },
+  },
   extraReducers() {},
 });
 
