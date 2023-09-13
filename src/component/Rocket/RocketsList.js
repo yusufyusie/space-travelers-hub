@@ -1,5 +1,11 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
 import PropTypes from 'prop-types';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+
+import style from './RocketsList.module.css';
 
 const RocketsList = (props) => {
   const {
@@ -7,19 +13,20 @@ const RocketsList = (props) => {
   } = props;
 
   return (
-    <div className="rocketsContainer">
-      <div className="rocketImg">
+    <Col className={style.rocketsContainer}>
+      <div className={style.rocketImg}>
         <img src={image} alt="rocket-img" />
       </div>
-      <div className="rocketDesc">
-        <h2 className="rocketName">
+      <div className={style.rocketDesc}>
+        <h4 className={style.rocketName}>
           {name}
-        </h2>
-        <p className="rocketType">
+        </h4>
+        <p className={style.rocketType}>
           {description}
         </p>
+        <Button>Reserve Rocket</Button>
       </div>
-    </div>
+    </Col>
   );
 };
 

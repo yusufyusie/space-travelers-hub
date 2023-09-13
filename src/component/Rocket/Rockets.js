@@ -1,7 +1,13 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchRocket } from '../../redux/rocket/rocketSlice';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+
 import RocketsList from './RocketsList';
+import { fetchRocket } from '../../redux/rocket/rocketSlice';
 
 export default function Rockets() {
   const rockets = useSelector((state) => state.rockets.rockets);
@@ -13,20 +19,18 @@ export default function Rockets() {
   }, [dispatch]);
 
   return (
-    <>
-      <ul className="rockets">
-        {
-          rockets.map((rocket) => (
-            <li key={rocket.id} className="rocketList">
-              <RocketsList
-                name={rocket.name}
-                description={rocket.description}
-                image={rocket.flickr_images[0]}
-              />
-            </li>
-          ))
-        }
-      </ul>
-    </>
+    <Container fluid>
+      {
+        rockets.map((rocket) => (
+          <Row key={rocket.id} className="rocketList">
+            <RocketsList
+              name={rocket.name}
+              description={rocket.description}
+              image={rocket.flickr_images[0]}
+            />
+          </Row>
+        ))
+      }
+    </Container>
   );
 }
