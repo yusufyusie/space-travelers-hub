@@ -47,4 +47,5 @@ const Missions = () => {
     <p>Missions are not available.</p>
   );
 };
+
 export default Missions;
