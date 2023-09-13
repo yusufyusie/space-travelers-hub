@@ -29,6 +29,7 @@ export default function Rockets() {
               name={rocket.name}
               description={rocket.description}
               image={rocket.flickr_images[0]}
+              reserved={rocket.reserved}
             />
           </Row>
         ))
