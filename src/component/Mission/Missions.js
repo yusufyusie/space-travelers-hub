@@ -32,7 +32,7 @@ const Missions = () => {
                 <td className={style.cell}>
                   {m.joined ? (
                     <span className={style.member}>Active Member</span>
-                  ) : (<span className={style.not_member}>NOT A MEMBER</span>)}
+                  ) : (<span className={style.notmember}>NOT A MEMBER</span>)}
                 </td>
                 <td className={style.cell}>
                   <button type="button" className={style.joinMissions} onClick={() => dispatch(joinMission(m.mission_id))}>

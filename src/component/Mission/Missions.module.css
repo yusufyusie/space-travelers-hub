@@ -25,6 +25,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
+
+.table td,
+.table th {
+  border: 2px solid #dadada;
+  padding: 1rem 0.5rem;
+}
+
 .table tr:nth-child(even) { background-color: #f2f2f2; }
 .table tr:hover { background-color: #ddd; }
 
@@ -66,4 +73,30 @@
 
 .cell {
   border: 1px solid #cecaca;
+}
+
+.notmember {
+  padding: 5px;
+  background-color: #777474;
+  color: white;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.member {
+  padding: 5px;
+  background-color: #0c9aad;
+  color: white;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  line-height: 25px;
+  text-align: center;
 }
