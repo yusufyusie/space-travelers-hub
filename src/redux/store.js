@@ -10,7 +10,7 @@ const store = configureStore({
     dragon: DragonReducer,
     allMissions: missionsReducer,
   },
-   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 export default store;
