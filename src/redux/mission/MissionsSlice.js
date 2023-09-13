@@ -9,7 +9,7 @@ const initialState = {
   error: '',
 };
 
-export const getAllMissions = createAsyncThunk(GET_MISSIONS, async (_, thunkAPI) => {
+export const getAllMissions = createAsyncThunk(GET_MISSIONS, async (_name, thunkAPI) => {
   try {
     const response = await axios.get(API_MISSION);
     return response.data;
@@ -21,19 +21,30 @@ export const getAllMissions = createAsyncThunk(GET_MISSIONS, async (_, thunkAPI)
 const missionsSlice = createSlice({
   name: 'allMissions',
   initialState,
-  reducers: {
-    joinMission: (state, action) => {
-      const newMissionsState = state.allMissions.map((mission) => {
-        if (mission.mission_id !== action.payload) {
-          return mission;
-        }
-        return mission.reserved === true ? { ...mission, reserved: false }
-          : { ...mission, reserved: true };
+  reducers: { },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getAllMissions.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getAllMissions.fulfilled, (state, action) => {
+        state.isLoading = false;
+        const missionsArray = [];
+        action.payload.forEach((item) => {
+          const mission = {
+            mission_id: item.mission_id,
+            mission_name: item.mission_name,
+            description: item.description,
+          };
+          missionsArray.push(mission);
+        });
+        state.missions = missionsArray;
+      })
+      .addCase(getAllMissions.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload.message;
       });
-      state.missions = newMissionsState;
-    },
   },
-  extraReducers() {},
 });
 
 export const { joinMission } = missionsSlice.actions;
