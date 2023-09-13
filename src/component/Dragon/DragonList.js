@@ -42,5 +42,5 @@ DrgaonList.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  reserved: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
