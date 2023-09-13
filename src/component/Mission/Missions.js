@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import style from './Missions.module.css';
-import { joinMission } from '../../redux/mission/MissionsSlice';
+import { joinMission, getAllMissions } from '../../redux/mission/MissionsSlice';
 
 const Missions = () => {
   const { allMissions, loading, error } = useSelector((store) => store.allMissions);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (allMissions.length === 0) {
+      dispatch(getAllMissions());
+    }
+  }, [dispatch, allMissions.length]);
 
   if (allMissions.length !== 0) {
     return (
