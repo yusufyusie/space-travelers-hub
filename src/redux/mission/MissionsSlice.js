@@ -38,7 +38,7 @@ const missionsSlice = createSlice({
           };
           missionArray.push(mission);
         });
-        state.missions = missionArray;
+        state.allMissions = missionArray;
       })
       .addCase(getAllMissions.rejected, (state, action) => {
         state.loading = false;
