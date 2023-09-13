@@ -13,7 +13,7 @@ export default function Profile() {
   const { allMissions } = useSelector((store) => store.allMissions);
 
   const joinedMissions = allMissions.filter((mission) => mission.joined === true);
-  
+
   return (
     <Container fluid className={style.container}>
       <div className={style.rocketSection}>
@@ -46,7 +46,7 @@ export default function Profile() {
             ))}
         </ListGroup>
       </div>
-        <div className={style.missionsList}>
+      <div className={style.missionsList}>
         <h2 className={style.listTitle}>My Missions</h2>
         {joinedMissions.length === 0
           ? <p>No joined missions</p> : (
@@ -56,6 +56,7 @@ export default function Profile() {
               ))}
             </ul>
           )}
+      </div>
     </Container>
   );
 }
