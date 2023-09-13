@@ -18,13 +18,34 @@ export const dragonSlice = createSlice({
   name: 'dragon',
   initialState,
   reducers: {
+    reserveDragon: (state, action) => {
+      console.log(action);
+      const newdragon = state.totalDragons.map((dragon) => {
+        if (dragon.id !== action.payload) {
+          return {
+            ...dragon,
+          };
+        }
+        return { ...dragon, reserved: true };
+      });
+      console.log(newdragon);
+      return { ...state, totalDragons: newdragon };
+    },
+    cancleDragon: (state, action) => {
+      console.log(action);
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchDragons.fulfilled, (state, action) => {
-      state.totalDragons = action.payload;
+      state.totalDragons = action.payload.map((dragon) => ({
+        id: dragon.id,
+        name: dragon.name,
+        type: dragon.type,
+        flickr_images: dragon.flickr_images[0],
+      }));
     });
   },
 });
 
-export const { addBook } = dragonSlice.actions;
+export const { reserveDragon, cancleDragon } = dragonSlice.actions;
 export default dragonSlice.reducer;
