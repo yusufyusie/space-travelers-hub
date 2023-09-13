@@ -9,7 +9,7 @@ const RocketsList = (props) => {
   return (
     <div className="rocketsContainer">
       <div className="rocketImg">
-        {image}
+        <img src={image} alt="rocket-img" />
       </div>
       <div className="rocketDesc">
         <h2 className="rocketName">
