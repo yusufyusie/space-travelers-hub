@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 import style from './RocketsList.module.css';
 
-import { reserveRocket } from '../../redux/rocket/rocketSlice';
+import { reserveRocket, cancelReservation } from '../../redux/rocket/rocketSlice';
 
 const RocketsList = (props) => {
   const {
@@ -19,6 +19,10 @@ const RocketsList = (props) => {
 
   const reserveRocketHandler = () => {
     dispatch(reserveRocket(id));
+  };
+
+  const cancelReservationHandler = () => {
+    dispatch(cancelReservation(id));
   };
 
   return (
@@ -38,7 +42,7 @@ const RocketsList = (props) => {
               </Badge>
               <span className={style.rockDesc}>{description}</span>
             </p>
-            <Button variant="light">Cancel Reservation</Button>
+            <Button variant="light" onClick={cancelReservationHandler}>Cancel Reservation</Button>
           </div>
         ) : (
           <div>
