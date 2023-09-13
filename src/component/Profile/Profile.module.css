@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1em 0;
+  gap: 1em;
+}
+
+.rocketSection {
+  width: 33%;
+}
