@@ -2,7 +2,7 @@ import './dragon.css';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { reserveDragon } from '../../redux/dragon/dragonSlice';
+import { reserveDragon, cancelDragon } from '../../redux/dragon/dragonSlice';
 
 export default function DrgaonList(props) {
   const dispatch = useDispatch();
@@ -17,9 +17,13 @@ export default function DrgaonList(props) {
         {
           reserved ? (
             <div>
-              <span className="reserved">Reserved</span>
-              <span className="type">{type}</span>
-              <button type="button">Cancle Reservation</button>
+              <div>
+                <span className="reserved">Reserved</span>
+                <span className="type">{type}</span>
+              </div>
+              <button type="button" className="cancel" onClick={() => dispatch(cancelDragon(id))}>
+                Cancle Reservation
+              </button>
             </div>
           )
             : (

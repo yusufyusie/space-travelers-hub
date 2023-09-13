@@ -29,7 +29,7 @@ export const dragonSlice = createSlice({
       });
       return { ...state, totalDragons: newdragon };
     },
-    cancleDragon: (state, action) => {
+    cancelDragon: (state, action) => {
       const newdragon = state.totalDragons.map((dragon) => {
         if (dragon.id !== action.payload) {
           return {
@@ -53,5 +53,5 @@ export const dragonSlice = createSlice({
   },
 });
 
-export const { reserveDragon, cancleDragon } = dragonSlice.actions;
+export const { reserveDragon, cancelDragon } = dragonSlice.actions;
 export default dragonSlice.reducer;
