@@ -4,19 +4,19 @@ import axios from 'axios';
 
 const baseURL = 'https://api.spacexdata.com/v4/rockets';
 
-const fetchRocket = createAsyncThunk('rocket/fetchRocket', () => (axios
+const fetchRocket = createAsyncThunk('rockets/fetchRocket', () => (axios
   .get(baseURL)
   .then((response) => response.data)
 ));
 
 const initialState = {
   loading: false,
-  rocket: [],
+  rockets: [],
   error: '',
 };
 
 const rocketSlice = createSlice({
-  name: 'rocket',
+  name: 'rockets',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -26,12 +26,12 @@ const rocketSlice = createSlice({
       })
       .addCase(fetchRocket.fulfilled, (state, action) => {
         state.loading = false;
-        state.rocket = action.payload;
+        state.rockets = action.payload;
         state.error = action.payload.length === 0 ? 'No result found!' : '';
       })
       .addCase(fetchRocket.rejected, (state, action) => {
         state.loading = false;
-        state.rocket = [];
+        state.rockets = [];
         state.error = action.error.message;
       });
   },
