@@ -19,6 +19,7 @@ export default function Dragons() {
           name={dragon.name}
           type={dragon.type}
           image={dragon.flickr_images}
+          reserved={dragon.reserved}
         />
       ))}
     </ul>
