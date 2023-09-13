@@ -1,18 +1,34 @@
 import './dragon.css';
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { reserveDragon } from '../../redux/dragon/dragonSlice';
 
 export default function DrgaonList(props) {
+  const dispatch = useDispatch();
   const {
-    id, name, type, image,
+    id, name, type, image, reserved,
   } = props;
   return (
     <li className="dragon-list" key={id}>
       <img className="dragonimage" src={image} alt="" />
       <div className="about">
-        <div>{name}</div>
-        <div>{type}</div>
-        <button className="d-reserve" type="button">Reserve Dragon</button>
+        <div className="dragon">{name}</div>
+        {
+          reserved ? (
+            <div>
+              <span className="reserved">Reserved</span>
+              <span className="type">{type}</span>
+              <button type="button">Cancle Reservation</button>
+            </div>
+          )
+            : (
+              <div>
+                <div className="type">{type}</div>
+                <button className="d-reserve" type="button" onClick={() => dispatch(reserveDragon(id))}>Reserve Dragon</button>
+              </div>
+            )
+        }
       </div>
     </li>
   );
@@ -22,4 +38,5 @@ DrgaonList.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  reserved: PropTypes.string.isRequired,
 };
