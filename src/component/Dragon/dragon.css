@@ -1,6 +1,6 @@
 .dragonimage {
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 250px;
 }
 
 .dragon-container {
@@ -16,13 +16,32 @@
 .dragon-list button {
   margin-top: 14%;
   background-color: #0290ff;
-  padding: 2% 4%;
+  padding: 5% 7%;
   border-radius: 4%;
   border: none;
 }
 
 .dragon-list .about {
   padding: 0.3% 0;
-  width: 10%;
+  width: 15%;
   margin-left: 0.5%;
+}
+
+.dragon {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.type {
+  font-size: 15px;
+  margin-top: 3%;
+}
+
+.reserved {
+  background-color: #00a2c5;
+  margin-right: 5%;
+  font-size: 12px;
+  padding: 1% 3%;
+  border-radius: 6px;
 }
