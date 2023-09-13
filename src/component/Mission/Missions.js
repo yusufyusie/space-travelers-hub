@@ -6,6 +6,11 @@ import { joinMission, getAllMissions } from '../../redux/mission/MissionsSlice';
 const Missions = () => {
   const { allMissions, loading, error } = useSelector((store) => store.allMissions);
   const dispatch = useDispatch();
+  const leaveMission = {
+    color: '#ea0000',
+    borderColor: '#ea0000',
+    outlineColor: '#ea0000',
+  };
 
   useEffect(() => {
     if (allMissions.length === 0) {
@@ -35,7 +40,7 @@ const Missions = () => {
                   ) : (<span className={style.notmember}>NOT A MEMBER</span>)}
                 </td>
                 <td className={style.cell}>
-                  <button type="button" className={style.joinMissions} onClick={() => dispatch(joinMission(m.mission_id))}>
+                  <button type="button" className={style.joinMissions} style={m.joined ? leaveMission : null} onClick={() => dispatch(joinMission(m.mission_id))}>
                     {m.joined ? (
                       'Leave Mission'
                     ) : ('Join Mission')}

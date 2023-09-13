@@ -75,6 +75,17 @@
   border: 1px solid #cecaca;
 }
 
+.cell:nth-child(3) {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cell:nth-child(4) {
+  text-align: center;
+}
+
 .notmember {
   padding: 5px;
   background-color: #777474;
@@ -99,4 +110,12 @@
   letter-spacing: 0.6px;
   line-height: 25px;
   text-align: center;
+}
+
+.joinMissions {
+  padding: 10px 15px;
+  font-size: 15px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
