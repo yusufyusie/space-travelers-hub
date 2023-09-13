@@ -1,0 +1,28 @@
+.dragonimage {
+  width: 150px;
+  height: 150px;
+}
+
+.dragon-container {
+  margin-top: 1%;
+  margin-left: 3%;
+}
+
+.dragon-list {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.dragon-list button {
+  margin-top: 14%;
+  background-color: #0290ff;
+  padding: 2% 4%;
+  border-radius: 4%;
+  border: none;
+}
+
+.dragon-list .about {
+  padding: 0.3% 0;
+  width: 10%;
+  margin-left: 0.5%;
+}
