@@ -1,10 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   allMissions: [],
-  isLoading: false,
-  error: undefined,
+  loading: false,
+  error: '',
 };
+
+export const getAllMissions = createAsyncThunk();
 
 const missionsSlice = createSlice({
   name: 'allMissions',

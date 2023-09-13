@@ -4,7 +4,7 @@ import style from './Missions.module.css';
 import { joinMission } from '../../redux/mission/MissionsSlice';
 
 const Missions = () => {
-  const { allMissions, isLoading, error } = useSelector((store) => store.allMissions);
+  const { allMissions, loading, error } = useSelector((store) => store.allMissions);
   const dispatch = useDispatch();
 
   if (allMissions.length !== 0) {
@@ -33,7 +33,7 @@ const Missions = () => {
       </section>
     );
   }
-  if (isLoading) {
+  if (loading) {
     return (
       <p> Missions are loading!</p>
     );
