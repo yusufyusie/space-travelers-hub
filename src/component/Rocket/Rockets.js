@@ -24,6 +24,8 @@ export default function Rockets() {
         rockets.map((rocket) => (
           <Row key={rocket.id} className="rocketList">
             <RocketsList
+              key={rocket.id}
+              id={rocket.id}
               name={rocket.name}
               description={rocket.description}
               image={rocket.flickr_images[0]}
