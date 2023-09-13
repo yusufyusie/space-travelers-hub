@@ -19,7 +19,6 @@ export const dragonSlice = createSlice({
   initialState,
   reducers: {
     reserveDragon: (state, action) => {
-      console.log(action);
       const newdragon = state.totalDragons.map((dragon) => {
         if (dragon.id !== action.payload) {
           return {
@@ -28,11 +27,18 @@ export const dragonSlice = createSlice({
         }
         return { ...dragon, reserved: true };
       });
-      console.log(newdragon);
       return { ...state, totalDragons: newdragon };
     },
-    cancleDragon: (state, action) => {
-      console.log(action);
+    cancelDragon: (state, action) => {
+      const newdragon = state.totalDragons.map((dragon) => {
+        if (dragon.id !== action.payload) {
+          return {
+            ...dragon,
+          };
+        }
+        return { ...dragon, reserved: false };
+      });
+      return { ...state, totalDragons: newdragon };
     },
   },
   extraReducers: (builder) => {
@@ -47,5 +53,5 @@ export const dragonSlice = createSlice({
   },
 });
 
-export const { reserveDragon, cancleDragon } = dragonSlice.actions;
+export const { reserveDragon, cancelDragon } = dragonSlice.actions;
 export default dragonSlice.reducer;
