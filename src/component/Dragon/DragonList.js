@@ -7,12 +7,12 @@ export default function DrgaonList(props) {
     id, name, type, image,
   } = props;
   return (
-    <li>
-      <div key={id}>
-        <img className="dragonimage" src={image} alt="" />
+    <li className="dragon-list" key={id}>
+      <img className="dragonimage" src={image} alt="" />
+      <div className="about">
         <div>{name}</div>
         <div>{type}</div>
-        <button type="button">Reserve Dragon</button>
+        <button className="d-reserve" type="button">Reserve Dragon</button>
       </div>
     </li>
   );

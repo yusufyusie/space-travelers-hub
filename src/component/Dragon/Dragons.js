@@ -1,3 +1,4 @@
+import './dragon.css';
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 import DragonList from './DragonList';
@@ -10,7 +11,7 @@ export default function Dragons() {
     dispatch(fetchDragons());
   }, [dispatch]);
   return (
-    <ul>
+    <ul className="dragon-container">
       {totalDragons.map((dragon) => (
         <DragonList
           key={dragon.id}
