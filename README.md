@@ -66,7 +66,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Soon]()
+- [Live demo](https://space-travelers-hub-76fy.onrender.com)
 
 <!--
 - [Video presentation](https://www.loom.com/share/)
