@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1em 0;
+  gap: 1em;
+}
+
+.rocketSection,
+.missionsList {
+  width: 100%;
+}
+
+.missionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.listTitle {
+  font-size: 1.5rem;
+  letter-spacing: 0.4px;
+}
+
+.missionsList p {
+  font-style: italic;
+}
+
+.missionsList ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.missionsList ul li {
+  padding: 10px 15px 5px 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.missionsList ul li:last-child {
+  border-bottom: none;
+}

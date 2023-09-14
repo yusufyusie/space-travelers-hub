@@ -1,0 +1,23 @@
+.rocketsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1em 0;
+  gap: 1em;
+}
+
+.rocketImg img {
+  max-width: 100%;
+}
+
+.rocketImg {
+  width: 25%;
+}
+
+.rocketDesc {
+  width: 100%;
+}
+
+.rockDesc {
+  margin-left: 0.75em;
+}
