@@ -1,6 +1,7 @@
 import './dragon.css';
 import React from 'react';
 import { useDispatch } from 'react-redux';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import { reserveDragon, cancelDragon } from '../../redux/dragon/dragonSlice';
 

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,7 +10,7 @@ import RocketsList from './RocketsList';
 import { fetchRocket } from '../../redux/rocket/rocketSlice';
 
 export default function Rockets() {
-  const rockets = useSelector((state) => state.rockets.rockets);
+  const { loading, rockets, error } = useSelector((state) => state.rockets);
 
   const dispatch = useDispatch();
 
@@ -20,11 +20,18 @@ export default function Rockets() {
 
   return (
     <Container fluid>
-      {
+      {loading && <div>loading...</div>}
+      {!loading && error && (
+        <div>
+          Error:
+          {' '}
+          {error}
+        </div>
+      )}
+      {!loading && rockets.length > 0 && (
         rockets.map((rocket) => (
           <Row key={rocket.id} className="rocketList">
             <RocketsList
-              key={rocket.id}
               id={rocket.id}
               name={rocket.name}
               description={rocket.description}
@@ -33,7 +40,7 @@ export default function Rockets() {
             />
           </Row>
         ))
-      }
+      )}
     </Container>
   );
 }
