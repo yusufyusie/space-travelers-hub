@@ -22,7 +22,7 @@ export default function DrgaonList(props) {
                 <span className="reserved">Reserved</span>
                 <span className="type">{type}</span>
               </div>
-              <button type="button" className="cancel" onClick={() => dispatch(cancelDragon(id))}>
+              <button data-testid="cancel-btn" type="button" className="cancel" onClick={() => dispatch(cancelDragon(id))}>
                 Cancle Reservation
               </button>
             </div>
@@ -30,7 +30,7 @@ export default function DrgaonList(props) {
             : (
               <div>
                 <div className="type">{type}</div>
-                <button className="d-reserve" type="button" onClick={() => dispatch(reserveDragon(id))}>Reserve Dragon</button>
+                <button data-testid="reserve-btn" className="d-reserve" type="button" onClick={() => dispatch(reserveDragon(id))}>Reserve Dragon</button>
               </div>
             )
         }
