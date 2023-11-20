@@ -8,8 +8,10 @@ export default function Dragons() {
   const { totalDragons } = useSelector((state) => state.dragon);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchDragons());
-  }, [dispatch]);
+    if (totalDragons.length === 0) {
+      dispatch(fetchDragons());
+    }
+  }, [dispatch, totalDragons.length]);
   return (
     <ul className="dragon-container">
       {totalDragons.map((dragon) => (

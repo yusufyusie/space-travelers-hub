@@ -15,8 +15,10 @@ export default function Rockets() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRocket());
-  }, [dispatch]);
+    if (rockets.length === 0) {
+      dispatch(fetchRocket());
+    }
+  }, [dispatch, rockets.length]);
 
   return (
     <Container fluid>
