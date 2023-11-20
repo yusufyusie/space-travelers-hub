@@ -7,10 +7,6 @@ jest.mock('react-redux', () => ({
   useDispatch: jest.fn(),
 }));
 
-test('Test for Home components', () => {
-  expect('4').toBe('4');
-});
-
 describe('DrgaonList Component', () => {
   it('renders all first before reserved', () => {
     const mockDispatch = jest.fn();
