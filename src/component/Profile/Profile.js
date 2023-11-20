@@ -12,17 +12,18 @@ export default function Profile() {
   const { totalDragons } = useSelector((state) => state.dragon);
   const { allMissions } = useSelector((store) => store.allMissions);
 
-  const joinedMissions = allMissions.filter((mission) => mission.joined === true);
+  const selectedRockets = rockets.filter((rocket) => rocket.reserved);
+  const selectedDragons = totalDragons.filter((dragon) => dragon.reserved);
+  const joinedMissions = allMissions.filter((mission) => mission.joined);
 
   return (
     <Container fluid className={style.container}>
       <div className={style.rocketSection}>
         <h4>My Rockets</h4>
-        {rockets.length === 0
+        {selectedRockets.length === 0
           ? <p style={{ fontStyle: 'italic' }}>No Selected Rocket</p> : (
             <ListGroup className={style.rocketList}>
-              {rockets
-                .filter((rocket) => rocket.reserved)
+              {selectedRockets
                 .map((rocket) => (
                   <ListGroup.Item key={rocket.id}>
                     <ReservedRocketList
@@ -36,11 +37,10 @@ export default function Profile() {
       </div>
       <div className={style.rocketSection}>
         <h4>My Dragons</h4>
-        {totalDragons.length === 0
+        {selectedDragons.length === 0
           ? <p style={{ fontStyle: 'italic' }}>No Selected Dragon</p> : (
             <ListGroup className={style.rocketList}>
-              {totalDragons
-                .filter((dragon) => dragon.reserved)
+              {selectedDragons
                 .map((dragon) => (
                   <ListGroup.Item key={dragon.id}>
                     <ReservedRocketList
